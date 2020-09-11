@@ -74,7 +74,7 @@ id="show-activity"
                   <td><%= i + 1 %></td>
                   <td><%= activity[i].name %></td>
                   <td><%= activity[i].qty %></td>
-                  <td><img src="http://localhost:3000/<%= activity[i].imageUrl %>" alt="imageUrl" width="70px"/></td>
+                  <td><img src="https://admin-devspace.herokuapp.com/<%= activity[i].imageUrl %>" alt="imageUrl" width="70px"/></td>
                   <td>
                     <form action="/admin/item/<%=itemId%>/activity/<%=activity[i].id%>?_method=DELETE" method="POST">
                       <a 
