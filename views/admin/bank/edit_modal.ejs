@@ -1,0 +1,39 @@
+  <!-- Modal -->
+  <div class="modal fade" id="edit-bank" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Bank</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/admin/bank?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="name">Bank Name</label>
+                    <input type="text" class="form-control bankName" name="bankName" placeholder="Enter bank name" required>
+                </div>
+                <div class="form-group">
+                  <label for="name">Beneficiary Account</label>
+                  <input type="text" class="form-control beneficiaryAccount" name="beneficiaryAccount" placeholder="Enter beneficiary number" required>
+                </div>
+                <div class="form-group">
+                  <label for="name">Beneficiary Name</label>
+                  <input type="text" class="form-control beneficiaryName" name="beneficiaryName" placeholder="Enter name" required>
+                </div>
+                <div class="form-group">
+                  <label for="name">Image</label>
+                  <input type="file" class="form-control image" name="image" placeholder="Enter bank image">
+                  <span>Pilih gambar untuk update image</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <input type="hidden" class="id" name="id">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
